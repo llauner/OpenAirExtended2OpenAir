@@ -1,0 +1,21 @@
+{
+  "name": "openair-extended-to-openair",
+  "version": "1.0.0",
+  "description": "OpenAirExtended to OpenAir",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llauner/OpenAirExtended2OpenAir.git"
+  },
+  "author": "Ludovic Launer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llauner/OpenAirExtended2OpenAir/issues"
+  },
+  "homepage": "https://github.com/llauner/OpenAirExtended2OpenAire",
+  "dependencies": {
+  }
+}
