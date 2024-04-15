@@ -67,7 +67,7 @@ function ReadAndProcess() {
     // All lines are read, file is closed now.
     fs.writeFile(outputFilename, newFileContent, 'utf8', function(err) {
       if (err) throw err;
-      console.log('File is updated successfully.');
+      console.log(`File is updated successfully: ${outputFilename}`);
     });
   });
 }
