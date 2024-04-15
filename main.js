@@ -47,6 +47,9 @@ function ReadAndProcess() {
           case 'ASR':
             newFileContent += `AC R` + '\n';
             break;
+          case 'GSEC':
+            newFileContent += `AC G` + '\n';
+            break;
           default:
             newFileContent += `AC ${currentAC}` + '\n';
             break;
