@@ -44,7 +44,7 @@ function ReadAndProcess() {
           case 'RMZ':
             newFileContent += `AC R` + '\n';
             break;
-          case 'AERIAL_SPORTING_RECREATIONAL':
+          case 'ASR':
             newFileContent += `AC R` + '\n';
             break;
           default:
