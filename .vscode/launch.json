@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\main.js",
-            "args": ["france.txt", "france_standard.txt"]
+            "args": ["../airspace/france.txt", "france_standard.txt"]
         }
     ]
 }
