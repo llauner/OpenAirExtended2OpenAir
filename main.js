@@ -57,7 +57,7 @@ function ReadAndProcess() {
       }
       currentAC = '';
     } 
-    else if (LineIs(line, 'AF') || LineIs(line, 'AG')) {
+    else if (LineIs(line, 'AF') || LineIs(line, 'AG') || LineIs(line, 'AA')) {
       // Do nothing: not supported in standard format
     }
     else {
