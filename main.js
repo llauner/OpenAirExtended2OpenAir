@@ -39,13 +39,13 @@ function ReadAndProcess() {
             newFileContent += `AC G` + '\n';
             break;
           case 'TMZ':
-            newFileContent += `AC R` + '\n';
+            newFileContent += `AC UNC` + '\n';
             break;
           case 'RMZ':
-            newFileContent += `AC R` + '\n';
+            newFileContent += `AC UNC` + '\n';
             break;
           case 'ASR':
-            newFileContent += `AC R` + '\n';
+            newFileContent += `AC UNC` + '\n';
             break;
           case 'GSEC':
             newFileContent += `AC G` + '\n';
