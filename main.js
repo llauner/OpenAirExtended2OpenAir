@@ -3,7 +3,7 @@ const readline = require('readline');
 const stream = require('stream');
 
 const ACClasses = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-const AYDirectToAC = ['R', 'P', 'Q', 'CTR'];
+const AYDirectToAC = ['P', 'Q', 'CTR'];
 
 // Get URL from command line parameters
 const extendedFileName = process.argv[2];
@@ -35,6 +35,9 @@ function ReadAndProcess() {
       } 
       else {
         switch (currentAY) {
+          case 'R':
+            newFileContent += `AC UNC` + '\n';
+            break;
           case 'W':
             newFileContent += `AC G` + '\n';
             break;
