@@ -20,15 +20,26 @@ function ReadAndProcess() {
   let currentAC = '';
 
   rl.on('line', function(line) {
+    // Explicitly preserve all AN lines
+    if (line.startsWith('AN')) {
+      newFileContent += line + '\n';
+    }
     // Check if the line contains the text to be replaced
-    if (LineIs(line, 'AC')) {            // Store current AC
-      currentAC =  line.split(' ')[1];
+    else if (LineIs(line, 'AC')) {            // Store current AC
+      let acValue = line.split(' ')[1];
+      if (acValue === 'UNCLASSIFIED') {
+        currentAC = 'R';
+      } else {
+        currentAC = acValue;
+      }
     }              
     else if (LineIs(line, 'AY')) {       // AY found, now we can build the new AC line
       let currentAY = line.split(' ')[1];
 
       if (ACClasses.includes(currentAC)) {
-        newFileContent += `AC ${currentAC}` + '\n';
+        if (currentAC) {
+          newFileContent += `AC ${currentAC}` + '\n';
+        }
       }
       else if (AYDirectToAC.includes(currentAY)) {
         newFileContent += `AC ${currentAY}` + '\n';
@@ -54,7 +65,10 @@ function ReadAndProcess() {
             newFileContent += `AC G` + '\n';
             break;
           default:
-            newFileContent += `AC ${currentAC}` + '\n';
+            if (currentAC) {
+              newFileContent += `AC ${currentAC}` + '\n';
+            }
+            // else: skip writing empty AC line
             break;
         }
       }
