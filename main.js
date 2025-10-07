@@ -65,7 +65,8 @@ function ReadAndProcess() {
             newFileContent += `AC G` + '\n';
             break;
           default:
-            if (currentAC) {
+            // Only write AC line if currentAC is not empty
+            if (currentAC && currentAC.trim()) {
               newFileContent += `AC ${currentAC}` + '\n';
             }
             // else: skip writing empty AC line
