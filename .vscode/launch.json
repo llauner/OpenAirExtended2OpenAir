@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\main.js",
-            "args": ["../airspace/france.txt", "france_openair_standard.txt"]
+            "args": ["../airspace/france.txt", "../airspace/france_openair_standard.txt"]
         }
     ]
 }

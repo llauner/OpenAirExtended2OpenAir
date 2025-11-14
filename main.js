@@ -27,7 +27,7 @@ function ReadAndProcess() {
     // Check if the line contains the text to be replaced
     else if (LineIs(line, 'AC')) {            // Store current AC
       let acValue = line.split(' ')[1];
-      if (acValue === 'UNCLASSIFIED') {
+      if (acValue === 'UNCLASSIFIED' || acValue === 'UNC') {
         currentAC = 'R';
       } else {
         currentAC = acValue;
